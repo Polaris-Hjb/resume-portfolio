@@ -10,6 +10,7 @@ const navLinks = [
   { label: '关于我', href: '#about' },
   { label: '技能栈', href: '#skills' },
   { label: '项目经历', href: '#projects' },
+  { label: '教育与证书', href: '#education' },
 ]
 
 export default function NavBar() {
