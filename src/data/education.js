@@ -10,7 +10,7 @@ export const education = {
   courses: ['Python', 'Java', 'C 语言', 'MySQL', 'Linux', '数据结构', 'JavaScript', '软件测试'],
   certificates: [
     {
-      name: '工信人才专业知识测评',
+      name: 'IITC 工信人才专业知识测评证书',
       field: '人工智能应用技术',
     },
   ],

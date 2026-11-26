@@ -38,7 +38,7 @@ export default function Education() {
             {education.certificates.map((cert) => (
               <li key={cert.name} className="flex flex-wrap items-baseline gap-x-2 text-sm">
                 <span className="font-medium">{cert.name}</span>
-                <span className="text-muted">{cert.field}</span>
+                <span className="text-muted">· {cert.field}</span>
               </li>
             ))}
           </ul>

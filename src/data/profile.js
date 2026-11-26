@@ -5,7 +5,7 @@
 export const profile = {
   name: '黄俊柏',
   title: 'RPA 开发工程师 / AI 应用工程师',
-  status: '2026 届应届生 · 求职中',
+  status: '2026 届毕业生 · 求职中',
   tagline: 'Python × RPA × AI Agent —— 把 AI 生成能力接入自动化流程，打通端到端闭环',
   city: '深圳',
   email: '1520613691@qq.com',
@@ -13,26 +13,26 @@ export const profile = {
   // 用 BASE_URL 拼接，部署到 GitHub Pages 这类子路径时不会 404
   resumeFile: `${import.meta.env.BASE_URL}resume.pdf`,
   about:
-    '2026 届软件技术专业毕业生，专注 RPA 自动化与 AI 应用开发。熟练使用影刀 RPA、Coze 工作流与 Python，能把 AI 生成能力接入 RPA 执行链路，完成"内容生成 → 素材下载 → 自动发布"的全流程闭环。擅长拆解业务流程痛点，用自动化方案替代重复劳动，持续为团队降本增效。',
+    '2026 届软件技术专业毕业生，专注 RPA 自动化、AI 应用开发与数据分析。熟练使用 Python、影刀 RPA、实在 Agent 与 Coze 工作流，能够独立完成从流程拆解、编排调试到上线运行的完整链路，并结合 WorkBuddy、Trae、Codex 等工具提升开发与交付效率。擅长识别业务流程中的重复环节，用自动化方案替代人工操作，降低人力成本，持续为团队增效赋能。',
 }
 
 /** 技能栈：四组，对应 RPA / AI 岗的能力模型 */
 export const skillGroups = [
   {
     group: 'Python 与数据处理',
-    items: ['Python', '面向对象', 'Pandas', 'NumPy', 'SQL', 'MySQL', '数据清洗'],
+    items: ['Python', '面向对象', 'Pandas', 'NumPy', 'SQL', 'MySQL'],
   },
   {
     group: 'RPA 自动化',
-    items: ['影刀 RPA', '实在 Agent', 'DOM 元素定位', '图像识别', '网页自动化', '批量表单提交'],
+    items: ['影刀 RPA', '实在 Agent', '网页自动化'],
   },
   {
     group: 'AI 智能体与工作流',
-    items: ['Coze', 'Prompt 工程', 'RAG 知识库', 'Agent 设计', 'Workflow 编排', 'Coze Open API', 'FastGPT'],
+    items: ['Coze', 'Prompt 工程', 'RAG 知识库', 'AI Agent', 'Workflow', 'FastGPT'],
   },
   {
-    group: '拓展工具',
-    items: ['WorkBuddy', 'Trae', 'Codex', 'JavaScript', 'Linux', 'Git'],
+    group: 'AI 应用与开发工具',
+    items: ['豆包', 'WorkBuddy', 'Trae', 'Codex', 'DeepSeek Harness', 'Git'],
   },
 ]
 
@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     name: '短视频自动化工具集',
-    stack: ['WorkBuddy SKILL', 'Python', '音视频处理'],
+    stack: ['WorkBuddy', 'SKILL', 'Python', '音视频处理'],
     summary: '围绕短视频生产链路封装三套自动化工具，覆盖采集、下载与剪辑三个环节。',
     children: [
       {
