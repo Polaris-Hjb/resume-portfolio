@@ -18,6 +18,20 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // 首屏防闪白：在样式生效前就决定主题，避免暗色用户看到一瞬间的白底
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (error) {
+          /* localStorage 不可用时退回亮色，不影响页面 */
+        }
+      })()
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

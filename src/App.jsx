@@ -5,11 +5,15 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Education from './components/Education.jsx'
 import Footer from './components/Footer.jsx'
+import BackToTop from './components/BackToTop.jsx'
+import { useTheme } from './hooks/useTheme.js'
 
 export default function App() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <>
-      <NavBar />
+      <NavBar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />
@@ -18,6 +22,7 @@ export default function App() {
         <Education />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }
