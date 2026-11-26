@@ -8,6 +8,8 @@ import { profile } from '../data/profile.js'
 const navLinks = [
   { label: '首页', href: '#home' },
   { label: '关于我', href: '#about' },
+  { label: '技能栈', href: '#skills' },
+  { label: '项目经历', href: '#projects' },
 ]
 
 export default function NavBar() {
