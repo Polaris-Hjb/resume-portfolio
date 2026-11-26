@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- 设计令牌：亮色 ---------- */
+:root {
+  --c-page: 255 255 255;
+  --c-surface: 255 255 255;
+  --c-surface-muted: 248 250 252;
+  --c-line: 226 232 240;
+  --c-ink: 15 23 42;
+  --c-muted: 71 85 105;
+  --c-faint: 148 163 184;
+  --c-brand: 29 78 216;
+  --c-brand-hover: 30 64 175;
+  --c-brand-soft: 239 244 255;
+}
+
+/* ---------- 设计令牌：暗色 ---------- */
+.dark {
+  --c-page: 11 18 32;
+  --c-surface: 17 26 43;
+  --c-surface-muted: 11 18 32;
+  --c-line: 30 41 59;
+  --c-ink: 226 232 240;
+  --c-muted: 148 163 184;
+  --c-faint: 100 116 139;
+  --c-brand: 59 130 246;
+  --c-brand-hover: 96 165 250;
+  --c-brand-soft: 22 35 58;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+  }
+
+  /* 锚点跳转时给固定导航留出空间，避免标题被遮住 */
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  /* 键盘 Tab 时才有焦点框，鼠标点击不显示 */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-page;
+  }
+}
+
+/* 尊重系统的"减少动态效果"设置 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
