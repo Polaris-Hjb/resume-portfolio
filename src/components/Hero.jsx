@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="mt-10">
           <a
             href={profile.resumeFile}
-            download
+            download={profile.resumeFileName}
             className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-hover"
           >
             <DownloadIcon className="h-4 w-4" />

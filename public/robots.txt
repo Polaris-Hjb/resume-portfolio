@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+# 简历文件不参与搜索引擎收录，降低被批量抓取的概率
+Disallow: /huangjunbai-resume.pdf

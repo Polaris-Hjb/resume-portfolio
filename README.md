@@ -33,7 +33,7 @@ resume-portfolio/
 ├── vite.config.js              # base 由 BASE_PATH 环境变量控制
 ├── tailwind.config.js          # darkMode: 'class'、颜色映射 CSS 变量
 ├── public/
-│   ├── resume.pdf              # 下载按钮指向的文件
+│   ├── huangjunbai-resume.pdf  # 下载按钮指向的文件（网站版，不含手机号与照片）
 │   ├── favicon.svg             # 深蓝方块 + "黄" 字
 │   └── robots.txt
 └── src/
@@ -101,7 +101,9 @@ resume-portfolio/
 
 ### 3. 替换简历 PDF
 
-把新 PDF 命名为 `resume.pdf` 覆盖 `public/resume.pdf` 即可。代码里用的是 `${import.meta.env.BASE_URL}resume.pdf`，子路径部署也不会 404。
+把新 PDF 命名为 `huangjunbai-resume.pdf` 覆盖 `public/huangjunbai-resume.pdf`，同时修改 `profile.js` 里 `resumeFile` 的 `?v=` 日期（如 `?v=20261201`），让浏览器和 CDN 重新拉取，避免下载到旧版。
+
+下载时浏览器另存的文件名由 `profile.resumeFileName` 决定（当前为 `黄俊柏-简历.pdf`），与真实文件名无关。
 
 ### 4. 调整配色
 
